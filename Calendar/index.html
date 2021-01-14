@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./css/owfont-regular.css"/>
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+
+<body>
+<div class="settings">
+    <label class="settings__switch">
+        <input type="checkbox" id="switch-checkbox">
+        <span class="slider round"></span>
+    </label>
+    <i id="setting__weather" class="fas fa-cloud-sun"></i>
+    <i id="setting__icon" class="fas fa-cog"></i>
+</div>
+<div id="window">
+    <i class="fas fa-times"></i>
+    <label class="window__item" for="choice1">Change first day of the week:<br>
+        <input id="choice1" class="checked" name="choice" type="radio" checked>Mon
+        <input id="choice2" name="choice" type="radio">San
+    </label>
+    <label class="window__item" for="window__check">Hide dates of previous and next month:
+        <input id="window__check" type="checkbox">
+    </label>
+    <label class="window__item">Change weekend days of the week:
+        <select id="window__select" multiple>
+            <option>Mon</option>
+            <option>Tue</option>
+            <option>Wed</option>
+            <option>Thu</option>
+            <option>Fri</option>
+            <option class="selected">Sat</option>
+            <option class="selected">Sun</option>
+        </select>
+    </label>
+</div>
+<div class="container">
+    <div class="calendar">
+        <div class="calendar-container">
+            <div class="calendar__month">
+                <i class="fas fa-angle-left prev"></i>
+                <div class="date">
+                    <h1></h1>
+                    <p></p>
+                </div>
+                <i class="fas fa-angle-right next"></i>
+            </div>
+            <div class="calendar__weekdays">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="calendar__days"></div>
+        </div>
+        <div class="todo-container hide">
+            <div class="todo__header">
+                <i class="fas fa-times white cross"></i>
+                <div id="date"></div>
+            </div>
+            <div class="todo__content">
+                <ul id="list"></ul>
+            </div>
+            <div class="todo__add-to-do">
+                <i class="fa fa-plus-circle"></i>
+                <input type="text" id="input" placeholder="Add a to-do">
+            </div>
+        </div>
+    </div>
+    <div class="weather hide">
+        <div class="weather-container">
+            <time class="weather__time"></time>
+            <div class="weather__city" contenteditable="true">Mogilev</div>
+            <i class="weather-icon owf"></i>
+            <div class="weather__temperature"></div>
+            <div class="weather-description"></div>
+        </div>
+    </div>
+    <div class="forecast-container hide">
+        <div class="forecast-item">
+            <h3 class="forecast-item__date"></h3>
+            <div class="forecast-item__info">
+                <p class="forecast-item__temperature"></p>
+                <i class="forecast-item__icon owf"></i>
+            </div>
+        </div>
+        <div class="forecast-item">
+            <h3 class="forecast-item__date"></h3>
+            <div class="forecast-item__info">
+                <p class="forecast-item__temperature"></p>
+                <i class="forecast-item__icon owf"></i>
+            </div>
+        </div>
+        <div class="forecast-item">
+            <h3 class="forecast-item__date"></h3>
+            <div class="forecast-item__info">
+                <p class="forecast-item__temperature"></p>
+                <i class="forecast-item__icon owf"></i>
+            </div>
+        </div>
+        <div class="forecast-item">
+            <h3 class="forecast-item__date"></h3>
+            <div class="forecast-item__info">
+                <p class="forecast-item__temperature"></p>
+                <i class="forecast-item__icon owf"></i>
+            </div>
+        </div>
+        <div class="forecast-item">
+            <h3 class="forecast-item__date"></h3>
+            <div class="forecast-item__info">
+                <p class="forecast-item__temperature"></p>
+                <i class="forecast-item__icon owf"></i>
+            </div>
+        </div>
+        <div class="forecast-item">
+            <h3 class="forecast-item__date"></h3>
+            <div class="forecast-item__info">
+                <p class="forecast-item__temperature"></p>
+                <i class="forecast-item__icon owf"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./script.js" type="module"></script>
+</body>
+
+</html>
